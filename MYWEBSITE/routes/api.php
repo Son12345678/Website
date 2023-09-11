@@ -18,6 +18,7 @@ use App\Http\Controllers\ProductController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post('create',[ProductController::class, 'create'])->middleware('auth');
-Route::delete('destroy/{id}', [ProductController::class,'destroy'])->middleware('auth');
-Route::get('show/{id}', [ProductController::class, 'show'])->middleware('auth');
+
+Route::post('create',[ProductController::class, 'create']);
+Route::delete('destroy/{id}', [ProductController::class,'destroy']);
+Route::get('show/{id}', [ProductController::class, 'show']);
